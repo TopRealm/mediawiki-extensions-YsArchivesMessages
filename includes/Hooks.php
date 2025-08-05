@@ -1699,7 +1699,7 @@ class Hooks implements
 	 * @param Skin $skin Skin object that will be used to generate the page
 	 */
 	public function onBeforePageDisplay( $out, $skin ): void {
-		$skins = $out->getConfig()->get( 'WikimediaStylesSkins' );
+		$skins = $out->getConfig()->get( 'YsArchivesStylesSkins' );
 
 		if ( in_array( $skin->getSkinName(), $skins ) ) {
 			$out->addModuleStyles( [ 'ext.ysarchivesmessages.styles' ] );

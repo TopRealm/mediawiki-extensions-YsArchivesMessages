@@ -25,10 +25,10 @@ class HooksTest extends MediaWikiUnitTestCase {
 		$skin = $this->createMock( Skin::class );
 		$skin->method( 'getSkinName' )
 			->willReturn( $currentSkin );
-		// Make OutputPage::getConfig return a HashConfig with wgWikimediaStylesSkins defined.
+		// Make OutputPage::getConfig return a HashConfig with wgYsArchivesStylesSkins defined.
 		$out = $this->createMock( OutputPage::class );
 		$out->method( 'getConfig' )
-			->willReturn( new HashConfig( [ 'WikimediaStylesSkins' => $wikimediaStyleSkins ] ) );
+			->willReturn( new HashConfig( [ 'YsArchivesStylesSkins' => $wikimediaStyleSkins ] ) );
 		// Assert that OutputPage::addModuleStyles is called with $expectedModuleStyles
 		$out->expects( $expectedModuleStyles !== [] ? $this->atLeastOnce() : $this->never() )
 			->method( 'addModuleStyles' )
