@@ -1,6 +1,6 @@
 <?php
 
-namespace MediaWiki\Extension\WikimediaMessages\LogFormatter;
+namespace MediaWiki\Extension\YsArchivesMessages\LogFormatter;
 
 use LogFormatter;
 

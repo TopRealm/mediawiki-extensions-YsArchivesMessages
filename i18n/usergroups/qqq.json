@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"ZoruaFox"
+		]
+	},
+	"group-autopatrolled": "{{doc-group|autopatrolled}}\nLocalized name of the autopatrolled users group.",
+	"group-autopatrolled-member": "{{doc-group|autopatrolled|member}}\nLocalized name of autopatrolled group member.",
+	"group-confirmed": "{{doc-group|confirmed}}\nLocalized name of the confirmed users group.",
+	"group-confirmed-member": "{{doc-group|confirmed|member}}\nLocalized name of confirmed group member.",
+	"group-eventsponsor": "{{doc-group|eventsponsor}}\nLocalized name of the event sponsors group.",
+	"group-eventsponsor-member": "{{doc-group|eventsponsor|member}}\nLocalized name of event sponsor group member.",
+	"group-flood": "{{doc-group|flood}}\nLocalized name of the bot accounts group.",
+	"group-flood-member": "{{doc-group|flood|member}}\nLocalized name of bot account group member.",
+	"group-ipblock-exempt": "{{doc-group|ipblock-exempt}}\nLocalized name of the IP block exempt group.",
+	"group-ipblock-exempt-member": "{{doc-group|ipblock-exempt|member}}\nLocalized name of IP block exempt group member.",
+	"group-massmessage-sender": "{{doc-group|massmessage-sender}}\nLocalized name of the mass message senders group.",
+	"group-massmessage-sender-member": "{{doc-group|massmessage-sender|member}}\nLocalized name of mass message sender group member.",
+	"group-patroller": "{{doc-group|patroller}}\nLocalized name of the patrollers group.",
+	"group-patroller-member": "{{doc-group|patroller|member}}\nLocalized name of patroller group member.",
+	"group-responsibleoperator": "{{doc-group|responsibleoperator}}\nLocalized name of the responsible operators group.",
+	"group-responsibleoperator-member": "{{doc-group|responsibleoperator|member}}\nLocalized name of responsible operator group member.",
+	"group-steward": "{{doc-group|steward}}\nLocalized name of the stewards group.",
+	"group-steward-member": "{{doc-group|steward|member}}\nLocalized name of steward group member.",
+	"group-templateeditor": "{{doc-group|templateeditor}}\nLocalized name of the template editors group.",
+	"group-templateeditor-member": "{{doc-group|templateeditor|member}}\nLocalized name of template editor group member.",
+	"group-importer": "{{doc-group|importer}}\nLocalized name of the importers group.",
+	"group-importer-member": "{{doc-group|importer|member}}\nLocalized name of importer group member."
+}

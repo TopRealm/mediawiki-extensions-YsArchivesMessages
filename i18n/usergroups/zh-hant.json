@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"ZoruaFox"
+		]
+	},
+	"group-autopatrolled": "優質編輯者",
+	"group-autopatrolled-member": "優質編輯者",
+	"group-confirmed": "確認用戶",
+	"group-confirmed-member": "確認用戶",
+	"group-eventsponsor": "活動組織者",
+	"group-eventsponsor-member": "活動組織者",
+	"group-flood": "機器用戶",
+	"group-flood-member": "機器用戶",
+	"group-ipblock-exempt": "IP封禁豁免者",
+	"group-ipblock-exempt-member": "IP封禁豁免者",
+	"group-massmessage-sender": "大量訊息發送者",
+	"group-massmessage-sender-member": "大量訊息發送者",
+	"group-patroller": "巡查員",
+	"group-patroller-member": "巡查員",
+	"group-responsibleoperator": "責任運營",
+	"group-responsibleoperator-member": "責任運營",
+	"group-steward": "檔案理事員",
+	"group-steward-member": "檔案理事員",
+	"group-templateeditor": "模板編輯員",
+	"group-templateeditor-member": "模板編輯員",
+	"group-importer": "導入者",
+	"group-importer-member": "導入者"
+}

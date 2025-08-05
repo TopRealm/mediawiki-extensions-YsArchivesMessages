@@ -1,55 +1,46 @@
 {
-	"name": "WikimediaMessages",
+	"name": "YsArchivesMessages",
 	"author": [
 		"Tim Starling",
 		"Siebrand Mazeland",
 		"James D. Forrester",
-		"Multichill"
+		"Multichill",
+		"[https://github.com/ZoruaFox ZoruaFox]"
 	],
-	"url": "https://www.mediawiki.org/wiki/Extension:WikimediaMessages",
-	"descriptionmsg": "wikimediamessages-desc",
+	"url": "https://github.com/TopRealm/mediawiki-extensions-YsArchivesMessages",
+	"descriptionmsg": "ysarchivesmessages-desc",
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",
 	"requires": {
 		"MediaWiki": ">= 1.43"
 	},
 	"MessagesDirs": {
-		"WikimediaMessages": [
-			"i18n/contactpage",
-			"i18n/wikimedia",
-			"i18n/wikimediainterwikisearchresults",
+		"YsArchivesMessages": [
 			"i18n/temporary",
-			"i18n/wikimediaoverrides",
-			"i18n/wikimediaoverridesnotranslate",
-			"i18n/wikimediaprojectnames",
-			"i18n/licensetexts",
 			"i18n/cclicensetexts",
-			"i18n/codeofconduct",
-			"i18n/wikitech",
-			"i18n/undeployedplaceholders",
-			"i18n/commonstrings"
+			"i18n/usergroups"
 		]
 	},
 	"AutoloadNamespaces": {
-		"MediaWiki\\Extension\\WikimediaMessages\\": "includes/"
+		"MediaWiki\\Extension\\YsArchivesMessages\\": "includes/"
 	},
 	"ResourceModules": {
-		"ext.wikimediamessages.styles": {
-			"localBasePath": "modules/ext.wikimediamessages.styles",
-			"remoteExtPath": "WikimediaMessages/modules/ext.wikimediamessages.styles",
-			"class": "MediaWiki\\Extension\\WikimediaMessages\\SiteAdminHelperModule"
+		"ext.ysarchivesmessages.styles": {
+			"localBasePath": "modules/ext.ysarchivesmessages.styles",
+			"remoteExtPath": "YsArchivesMessages/modules/ext.ysarchivesmessages.styles",
+			"class": "MediaWiki\\Extension\\YsArchivesMessages\\SiteAdminHelperModule"
 		},
-		"ext.wikimediamessages.contactpage": {
+		"ext.ysarchivesmessages.contactpage": {
 			"localBasePath": "modules",
-			"remoteExtPath": "WikimediaMessages/modules",
+			"remoteExtPath": "YsArchivesMessages/modules",
 			"styles": "contactpage.css"
 		}
 	},
-	"callback": "MediaWiki\\Extension\\WikimediaMessages\\Hooks::onRegistration",
+	"callback": "MediaWiki\\Extension\\YsArchivesMessages\\Hooks::onRegistration",
 	"HookHandlers": {
-		"WikimediaMessagesHooks": {
-			"class": "MediaWiki\\Extension\\WikimediaMessages\\Hooks",
-			"factory": "MediaWiki\\Extension\\WikimediaMessages\\Hooks::factory",
+		"YsArchivesMessagesHooks": {
+			"class": "MediaWiki\\Extension\\YsArchivesMessages\\Hooks",
+			"factory": "MediaWiki\\Extension\\YsArchivesMessages\\Hooks::factory",
 			"services": [
 				"LinkRenderer",
 				"MainConfig",
@@ -60,67 +51,67 @@
 				"MobileFrontend.Context"
 			]
 		},
-		"WikimediaMessagesCampaignEventsHooks": {
-			"class": "MediaWiki\\Extension\\WikimediaMessages\\WikimediaMessagesCampaignEventsHooks"
+		"YsArchivesMessagesCampaignEventsHooks": {
+			"class": "MediaWiki\\Extension\\YsArchivesMessages\\WikimediaMessagesCampaignEventsHooks"
 		}
 	},
 	"Hooks": {
 		"BeforePageDisplay": {
-			"handler": "WikimediaMessagesHooks"
+			"handler": "YsArchivesMessagesHooks"
 		},
 		"MessageCacheFetchOverrides": {
-			"handler": "WikimediaMessagesHooks"
+			"handler": "YsArchivesMessagesHooks"
 		},
 		"SkinCopyrightFooterMessage": {
-			"handler": "WikimediaMessagesHooks"
+			"handler": "YsArchivesMessagesHooks"
 		},
 		"EditPageCopyrightWarning": {
-			"handler": "WikimediaMessagesHooks"
+			"handler": "YsArchivesMessagesHooks"
 		},
-		"DiscussionToolsTermsOfUseMessages": "MediaWiki\\Extension\\WikimediaMessages\\Hooks::onDiscussionToolsTermsOfUseMessages",
-		"FlowTermsOfUseMessages": "MediaWiki\\Extension\\WikimediaMessages\\Hooks::onFlowTermsOfUseMessages",
+		"DiscussionToolsTermsOfUseMessages": "MediaWiki\\Extension\\YsArchivesMessages\\Hooks::onDiscussionToolsTermsOfUseMessages",
+		"FlowTermsOfUseMessages": "MediaWiki\\Extension\\YsArchivesMessages\\Hooks::onFlowTermsOfUseMessages",
 		"SkinAddFooterLinks": {
-			"handler": "WikimediaMessagesHooks"
+			"handler": "YsArchivesMessagesHooks"
 		},
-		"TorBlockBlockedMsg": "MediaWiki\\Extension\\WikimediaMessages\\Hooks::onTorBlockBlockedMsg",
+		"TorBlockBlockedMsg": "MediaWiki\\Extension\\YsArchivesMessages\\Hooks::onTorBlockBlockedMsg",
 		"UploadForm:initial": {
-			"handler": "WikimediaMessagesHooks"
+			"handler": "YsArchivesMessagesHooks"
 		},
 		"ResourceLoaderRegisterModules": {
-			"handler": "WikimediaMessagesHooks"
+			"handler": "YsArchivesMessagesHooks"
 		},
 		"SpecialPageBeforeExecute": {
-			"handler": "WikimediaMessagesHooks"
+			"handler": "YsArchivesMessagesHooks"
 		},
 		"CampaignEventsGetPolicyMessageForRegistration": {
-			"handler": "WikimediaMessagesCampaignEventsHooks"
+			"handler": "YsArchivesMessagesCampaignEventsHooks"
 		},
 		"CampaignEventsGetPolicyMessageForRegistrationForm": {
-			"handler": "WikimediaMessagesCampaignEventsHooks"
+			"handler": "YsArchivesMessagesCampaignEventsHooks"
 		},
 		"SkinTemplateNavigation::Universal": {
-			"handler": "WikimediaMessagesHooks"
+			"handler": "YsArchivesMessagesHooks"
 		},
 		"SidebarBeforeOutput": {
-			"handler": "WikimediaMessagesHooks"
+			"handler": "YsArchivesMessagesHooks"
 		}
 	},
 	"ConfigRegistry": {
-		"wikimedia-messages": "GlobalVarConfig::newInstance"
+		"ysarchives-messages": "GlobalVarConfig::newInstance"
 	},
 	"config": {
-		"WikimediaStylesSkins": {
+		"YsArchivesStylesSkins": {
 			"value": [
 				"vector-2022",
 				"minerva"
 			],
-			"description": "Define skins that should get Wikimedia styles. This currently corresponds to skins that support the night (dark mode) theme."
+			"description": "Define skins that should get YsArchives styles. This currently corresponds to skins that support the night (dark mode) theme."
 		},
-		"WikimediaMessagesLicensing": {
+		"YsArchivesMessagesLicensing": {
 			"value": "standard",
 			"description": "Style of licensing messages to display, one of 'standard', 'commons', 'mediawiki', 'wikidata', 'wikinews', 'wikifunctions'"
 		},
-		"WikimediaMessagesAnonDonateLink": {
+		"YsArchivesMessagesAnonDonateLink": {
 			"value": false,
 			"description": "Move the donate link for anonymous users from the menu sidebar to login/account creation area"
 		}

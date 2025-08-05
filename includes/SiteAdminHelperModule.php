@@ -17,7 +17,7 @@
  *
  * @file
  */
-namespace MediaWiki\Extension\WikimediaMessages;
+namespace MediaWiki\Extension\YsArchivesMessages;
 
 use MediaWiki\ResourceLoader\Context;
 use MediaWiki\ResourceLoader\FileModule;

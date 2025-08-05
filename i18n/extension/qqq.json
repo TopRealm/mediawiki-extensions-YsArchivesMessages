@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"ZoruaFox"
+		]
+	},
+	"ysarchivesmessages": "{{name}}",
+	"ysarchivesmessages-desc": "{{desc|name=YsArchivesMessages|url=https://github.com/TopRealm/mediawiki-extensions-YsArchivesMessages}}"
+}

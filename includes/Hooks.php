@@ -3,7 +3,7 @@
 // phpcs:disable MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName
 // Need to be able to define ::onUploadForm_initial
 
-namespace MediaWiki\Extension\WikimediaMessages;
+namespace MediaWiki\Extension\YsArchivesMessages;
 
 use ErrorPageError;
 use HtmlArmor;
@@ -11,7 +11,7 @@ use MediaWiki\Cache\Hook\MessageCacheFetchOverridesHook;
 use MediaWiki\Config\Config;
 use MediaWiki\Config\ConfigException;
 use MediaWiki\Config\ServiceOptions;
-use MediaWiki\Extension\WikimediaMessages\LogFormatter\WMUserMergeLogFormatter;
+use MediaWiki\Extension\YsArchivesMessages\LogFormatter\WMUserMergeLogFormatter;
 use MediaWiki\Hook\EditPageCopyrightWarningHook;
 use MediaWiki\Hook\SidebarBeforeOutputHook;
 use MediaWiki\Hook\SkinAddFooterLinksHook;
@@ -43,7 +43,7 @@ use Wikimedia\IPUtils;
 use Wikimedia\Message\MessageSpecifier;
 
 /**
- * Hooks for WikimediaMessages extension
+ * Hooks for YsArchivesMessages extension
  *
  * @file
  * @ingroup Extensions
@@ -64,7 +64,7 @@ class Hooks implements
 	public const CONSTRUCTOR_OPTIONS = [
 		MainConfigNames::DBname,
 		MainConfigNames::ForceUIMsgAsContentMsg,
-		'WikimediaMessagesLicensing',
+		'YsArchivesMessagesLicensing',
 		MainConfigNames::LanguageCode,
 		MainConfigNames::RightsText,
 		MainConfigNames::RightsPage,
@@ -256,7 +256,7 @@ class Hooks implements
 			}
 		}
 
-		$licensing = $this->options->get( 'WikimediaMessagesLicensing' );
+		$licensing = $this->options->get( 'YsArchivesMessagesLicensing' );
 		$rightsText = $this->options->get( MainConfigNames::RightsText );
 
 		switch ( $licensing ) {
@@ -283,7 +283,7 @@ class Hooks implements
 				}
 				break;
 			default:
-				throw new ConfigException( "Unknown value for WikimediaMessagesLicensing: '$licensing'" );
+				throw new ConfigException( "Unknown value for YsArchivesMessagesLicensing: '$licensing'" );
 		}
 
 		$keys['mainpage-title-loggedin'] = function ( string $key ): string {
@@ -330,7 +330,7 @@ class Hooks implements
 			return;
 		}
 
-		$licensing = $this->options->get( 'WikimediaMessagesLicensing' );
+		$licensing = $this->options->get( 'YsArchivesMessagesLicensing' );
 		$isMobile = $this->mobileContext && $this->mobileContext->shouldDisplayMobileView();
 
 		switch ( $licensing ) {
@@ -365,7 +365,7 @@ class Hooks implements
 				$msgSpec = Message::newFromSpecifier( 'wikifunctions-site-footer-copyright-footer' );
 				break;
 			default:
-				throw new ConfigException( "Unknown value for WikimediaMessagesLicensing: '$licensing'" );
+				throw new ConfigException( "Unknown value for YsArchivesMessagesLicensing: '$licensing'" );
 		}
 	}
 
@@ -378,7 +378,7 @@ class Hooks implements
 	 * @param array &$msg
 	 */
 	public function onEditPageCopyrightWarning( $title, &$msg ) {
-		$licensing = $this->options->get( 'WikimediaMessagesLicensing' );
+		$licensing = $this->options->get( 'YsArchivesMessagesLicensing' );
 
 		switch ( $licensing ) {
 			case 'wikidata':
@@ -399,7 +399,7 @@ class Hooks implements
 				// Use the default MediaWiki message. (It's overridden locally on most Wikinewses.)
 				break;
 			default:
-				throw new ConfigException( "Unknown value for WikimediaMessagesLicensing: '$licensing'" );
+				throw new ConfigException( "Unknown value for YsArchivesMessagesLicensing: '$licensing'" );
 		}
 	}
 
@@ -413,7 +413,7 @@ class Hooks implements
 	public static function onDiscussionToolsTermsOfUseMessages(
 		array &$messages, MessageLocalizer $context, Config $config
 	) {
-		$licensing = $config->get( 'WikimediaMessagesLicensing' );
+		$licensing = $config->get( 'YsArchivesMessagesLicensing' );
 
 		switch ( $licensing ) {
 			case 'wikidata':
@@ -436,7 +436,7 @@ class Hooks implements
 				$links = [ $context->msg( 'wikimedia-license-links' )->plain(), 2 ];
 				break;
 			default:
-				throw new ConfigException( "Unknown value for WikimediaMessagesLicensing: '$licensing'" );
+				throw new ConfigException( "Unknown value for YsArchivesMessagesLicensing: '$licensing'" );
 		}
 
 		$messages['reply'] = array_merge( [ 'wikimedia-discussiontools-replywidget-terms-click',
@@ -455,7 +455,7 @@ class Hooks implements
 	public static function onFlowTermsOfUseMessages(
 		array &$messages, MessageLocalizer $context, Config $config
 	) {
-		$licensing = $config->get( 'WikimediaMessagesLicensing' );
+		$licensing = $config->get( 'YsArchivesMessagesLicensing' );
 
 		switch ( $licensing ) {
 			case 'wikidata':
@@ -478,7 +478,7 @@ class Hooks implements
 				$links = [ $context->msg( 'wikimedia-license-links' )->plain(), 2 ];
 				break;
 			default:
-				throw new ConfigException( "Unknown value for WikimediaMessagesLicensing: '$licensing'" );
+				throw new ConfigException( "Unknown value for YsArchivesMessagesLicensing: '$licensing'" );
 		}
 
 		$messages['edit'] = array_merge( [ 'wikimedia-flow-terms-of-use-edit' ], $links );
@@ -1702,7 +1702,7 @@ class Hooks implements
 		$skins = $out->getConfig()->get( 'WikimediaStylesSkins' );
 
 		if ( in_array( $skin->getSkinName(), $skins ) ) {
-			$out->addModuleStyles( [ 'ext.wikimediamessages.styles' ] );
+			$out->addModuleStyles( [ 'ext.ysarchivesmessages.styles' ] );
 		}
 	}
 
@@ -1713,9 +1713,9 @@ class Hooks implements
 	 */
 	public function onResourceLoaderRegisterModules( ResourceLoader $resourceLoader ): void {
 		if ( $this->extensionRegistry->isLoaded( 'IPInfo' ) ) {
-			$resourceLoader->register( 'ext.wikimediaMessages.ipInfo.hooks', [
-				'localBasePath' => dirname( __DIR__ ) . '/modules/ext.wikimediaMessages.ipInfo.hooks',
-				'remoteExtPath' => 'WikimediaMessages/modules/ext.wikimediaMessages.ipInfo.hooks',
+			$resourceLoader->register( 'ext.ysarchivesmessages.ipinfo.hooks', [
+				'localBasePath' => dirname( __DIR__ ) . '/modules/ext.ysarchivesmessages.ipinfo.hooks',
+				'remoteExtPath' => 'YsArchivesMessages/modules/ext.ysarchivesmessages.ipinfo.hooks',
 				'scripts' => 'infobox.js',
 				'styles' => 'infobox.less',
 				'messages' => [
@@ -1771,7 +1771,7 @@ class Hooks implements
 			return;
 		}
 
-		$special->getOutput()->addModules( 'ext.wikimediaMessages.ipInfo.hooks' );
+		$special->getOutput()->addModules( 'ext.ysarchivesmessages.ipinfo.hooks' );
 	}
 
 	/**
@@ -1786,7 +1786,7 @@ class Hooks implements
 
 		if (
 			$skin->getSkinName() === 'vector-2022' &&
-			$config->get( 'WikimediaMessagesAnonDonateLink' ) &&
+			$config->get( 'YsArchivesMessagesAnonDonateLink' ) &&
 			$user->isAnon()
 		) {
 			return true;

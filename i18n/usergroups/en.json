@@ -1,0 +1,29 @@
+{
+	"@metadata": {
+		"authors": [
+			"ZoruaFox"
+		]
+	},
+	"group-autopatrolled": "Autopatrolled users",
+	"group-autopatrolled-member": "{{GENDER:$1|autopatrolled user}}",
+	"group-confirmed": "Confirmed users",
+	"group-confirmed-member": "{{GENDER:$1|confirmed user}}",
+	"group-eventsponsor": "Event sponsors",
+	"group-eventsponsor-member": "{{GENDER:$1|event sponsor}}",
+	"group-flood": "Bot accounts",
+	"group-flood-member": "{{GENDER:$1|bot account}}",
+	"group-ipblock-exempt": "IP block exempts",
+	"group-ipblock-exempt-member": "{{GENDER:$1|IP block exempt}}",
+	"group-massmessage-sender": "Mass message senders",
+	"group-massmessage-sender-member": "{{GENDER:$1|mass message sender}}",
+	"group-patroller": "Patrollers",
+	"group-patroller-member": "{{GENDER:$1|patroller}}",
+	"group-responsibleoperator": "Responsible operators",
+	"group-responsibleoperator-member": "{{GENDER:$1|responsible operator}}",
+	"group-steward": "Stewards",
+	"group-steward-member": "{{GENDER:$1|steward}}",
+	"group-templateeditor": "Template editors",
+	"group-templateeditor-member": "{{GENDER:$1|template editor}}",
+	"group-importer": "Importers",
+	"group-importer-member": "{{GENDER:$1|importer}}"
+}

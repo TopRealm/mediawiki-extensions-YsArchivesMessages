@@ -1,6 +1,6 @@
 <?php
 
-namespace MediaWiki\Extension\WikimediaMessages;
+namespace MediaWiki\Extension\YsArchivesMessages;
 
 use MediaWiki\Extension\CampaignEvents\Hooks\CampaignEventsGetPolicyMessageForRegistrationFormHook;
 use MediaWiki\Extension\CampaignEvents\Hooks\CampaignEventsGetPolicyMessageForRegistrationHook;
