@@ -8,6 +8,7 @@
 		"[https://github.com/ZoruaFox ZoruaFox]"
 	],
 	"url": "https://github.com/TopRealm/mediawiki-extensions-YsArchivesMessages",
+	"namemsg": "ysarchivemessages",
 	"descriptionmsg": "ysarchivesmessages-desc",
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",
@@ -25,95 +26,23 @@
 		"MediaWiki\\Extension\\YsArchivesMessages\\": "includes/"
 	},
 	"ResourceModules": {
-		"ext.ysarchivesmessages.styles": {
-			"localBasePath": "modules/ext.ysarchivesmessages.styles",
-			"remoteExtPath": "YsArchivesMessages/modules/ext.ysarchivesmessages.styles",
-			"class": "MediaWiki\\Extension\\YsArchivesMessages\\SiteAdminHelperModule"
-		},
-		"ext.ysarchivesmessages.contactpage": {
-			"localBasePath": "modules",
-			"remoteExtPath": "YsArchivesMessages/modules",
-			"styles": "contactpage.css"
+		"ext.ysarchivesmessages": {
+			"packageFiles": [ "ext.YsArchivesMessages.js" ]
 		}
 	},
-	"callback": "MediaWiki\\Extension\\YsArchivesMessages\\Hooks::onRegistration",
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "YsArchivesMessages/resources"
+	},
 	"HookHandlers": {
-		"YsArchivesMessagesHooks": {
+		"main": {
 			"class": "MediaWiki\\Extension\\YsArchivesMessages\\Hooks",
-			"factory": "MediaWiki\\Extension\\YsArchivesMessages\\Hooks::factory",
-			"services": [
-				"LinkRenderer",
-				"MainConfig",
-				"PermissionManager",
-				"UserOptionsLookup"
-			],
-			"optional_services": [
-				"MobileFrontend.Context"
-			]
-		},
-		"YsArchivesMessagesCampaignEventsHooks": {
-			"class": "MediaWiki\\Extension\\YsArchivesMessages\\WikimediaMessagesCampaignEventsHooks"
+			"services": [ "MainConfig" ]
 		}
 	},
 	"Hooks": {
 		"BeforePageDisplay": {
-			"handler": "YsArchivesMessagesHooks"
-		},
-		"MessageCacheFetchOverrides": {
-			"handler": "YsArchivesMessagesHooks"
-		},
-		"SkinCopyrightFooterMessage": {
-			"handler": "YsArchivesMessagesHooks"
-		},
-		"EditPageCopyrightWarning": {
-			"handler": "YsArchivesMessagesHooks"
-		},
-		"DiscussionToolsTermsOfUseMessages": "MediaWiki\\Extension\\YsArchivesMessages\\Hooks::onDiscussionToolsTermsOfUseMessages",
-		"FlowTermsOfUseMessages": "MediaWiki\\Extension\\YsArchivesMessages\\Hooks::onFlowTermsOfUseMessages",
-		"SkinAddFooterLinks": {
-			"handler": "YsArchivesMessagesHooks"
-		},
-		"TorBlockBlockedMsg": "MediaWiki\\Extension\\YsArchivesMessages\\Hooks::onTorBlockBlockedMsg",
-		"UploadForm:initial": {
-			"handler": "YsArchivesMessagesHooks"
-		},
-		"ResourceLoaderRegisterModules": {
-			"handler": "YsArchivesMessagesHooks"
-		},
-		"SpecialPageBeforeExecute": {
-			"handler": "YsArchivesMessagesHooks"
-		},
-		"CampaignEventsGetPolicyMessageForRegistration": {
-			"handler": "YsArchivesMessagesCampaignEventsHooks"
-		},
-		"CampaignEventsGetPolicyMessageForRegistrationForm": {
-			"handler": "YsArchivesMessagesCampaignEventsHooks"
-		},
-		"SkinTemplateNavigation::Universal": {
-			"handler": "YsArchivesMessagesHooks"
-		},
-		"SidebarBeforeOutput": {
-			"handler": "YsArchivesMessagesHooks"
-		}
-	},
-	"ConfigRegistry": {
-		"ysarchives-messages": "GlobalVarConfig::newInstance"
-	},
-	"config": {
-		"YsArchivesStylesSkins": {
-			"value": [
-				"vector-2022",
-				"minerva"
-			],
-			"description": "Define skins that should get YsArchives styles. This currently corresponds to skins that support the night (dark mode) theme."
-		},
-		"YsArchivesMessagesLicensing": {
-			"value": "standard",
-			"description": "Style of licensing messages to display, one of 'standard', 'commons', 'mediawiki', 'wikidata', 'wikinews', 'wikifunctions'"
-		},
-		"YsArchivesMessagesAnonDonateLink": {
-			"value": false,
-			"description": "Move the donate link for anonymous users from the menu sidebar to login/account creation area"
+			"handler": "main"
 		}
 	},
 	"manifest_version": 2
