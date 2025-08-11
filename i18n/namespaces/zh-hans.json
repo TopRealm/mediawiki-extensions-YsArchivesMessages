@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"ZoruaFox"
+		]
+	},
+	"nstab-draft": "草稿",
+	"nstab-draft_talk": "草稿讨论",
+	"nstab-fanmade": "同人",
+	"nstab-fanmade_talk": "同人讨论",
+	"namespace-draft": "草稿",
+	"namespace-draft-talk": "草稿讨论",
+	"namespace-fanmade": "同人",
+	"namespace-fanmade-talk": "同人讨论",
+	"tooltip-ca-nstab-draft": "查看此草稿页面",
+	"tooltip-ca-nstab-fanmade": "查看此同人页面",
+	"tooltip-ca-talk-draft": "关于此草稿页面的讨论",
+	"tooltip-ca-talk-fanmade": "关于此同人页面的讨论",
+	"namespaceinfo-description-ns300": "草稿命名空间",
+	"namespaceinfo-description-ns301": "草稿命名空间页面的讨论页",
+	"namespaceinfo-description-ns302": "同人命名空间",
+	"namespaceinfo-description-ns303": "同人命名空间页面的讨论页"
+}

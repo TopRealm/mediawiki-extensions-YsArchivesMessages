@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"ZoruaFox"
+		]
+	},
+	"nstab-draft": "Draft",
+	"nstab-draft_talk": "Draft talk",
+	"nstab-fanmade": "Fanmade",
+	"nstab-fanmade_talk": "Fanmade talk",
+	"namespace-draft": "Draft",
+	"namespace-draft-talk": "Draft talk",
+	"namespace-fanmade": "Fanmade",
+	"namespace-fanmade-talk": "Fanmade talk",
+	"tooltip-ca-nstab-draft": "View the draft page",
+	"tooltip-ca-nstab-fanmade": "View the fanmade page",
+	"tooltip-ca-talk-draft": "Discussion about this draft page",
+	"tooltip-ca-talk-fanmade": "Discussion about this fanmade page",
+	"namespaceinfo-description-ns300": "Draft namespace",
+	"namespaceinfo-description-ns301": "Talk pages for the Draft namespace",
+	"namespaceinfo-description-ns302": "Fanmade namespace",
+	"namespaceinfo-description-ns303": "Talk pages for the Fanmade namespace"
+}

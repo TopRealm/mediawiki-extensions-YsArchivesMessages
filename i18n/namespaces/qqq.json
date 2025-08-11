@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"ZoruaFox"
+		]
+	},
+	"nstab-draft": "Tab label for pages in the Draft namespace (ID 300).",
+	"nstab-draft_talk": "Tab label for pages in the Draft talk namespace (ID 301). Not always used; talk tabs often use a generic system message.",
+	"nstab-fanmade": "Tab label for pages in the Fanmade namespace (ID 302).",
+	"nstab-fanmade_talk": "Tab label for pages in the Fanmade talk namespace (ID 303). Not always used; talk tabs often use a generic system message.",
+	"namespace-draft": "Localized name of the Draft namespace (ID 300).",
+	"namespace-draft-talk": "Localized name of the Draft talk namespace (ID 301).",
+	"namespace-fanmade": "Localized name of the Fanmade namespace (ID 302).",
+	"namespace-fanmade-talk": "Localized name of the Fanmade talk namespace (ID 303).",
+	"tooltip-ca-nstab-draft": "Tooltip for the content tab when viewing a page in the Draft namespace.",
+	"tooltip-ca-nstab-fanmade": "Tooltip for the content tab when viewing a page in the Fanmade namespace.",
+	"tooltip-ca-talk-draft": "Tooltip for the talk tab of pages in the Draft namespace.",
+	"tooltip-ca-talk-fanmade": "Tooltip for the talk tab of pages in the Fanmade namespace.",
+	"namespaceinfo-description-ns300": "Description shown in namespace information for namespace ID 300 (Draft).",
+	"namespaceinfo-description-ns301": "Description shown in namespace information for namespace ID 301 (Draft talk).",
+	"namespaceinfo-description-ns302": "Description shown in namespace information for namespace ID 302 (Fanmade).",
+	"namespaceinfo-description-ns303": "Description shown in namespace information for namespace ID 303 (Fanmade talk)."
+}
