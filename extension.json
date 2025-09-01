@@ -18,7 +18,6 @@
 	"MessagesDirs": {
 		"YsArchivesMessages": [
 			"i18n/extensions",
-			"i18n/cclicensetexts",
 			"i18n/usergroups",
 			"i18n/namespaces"
 		]
