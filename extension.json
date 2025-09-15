@@ -31,8 +31,8 @@
 		}
 	},
 	"ResourceFileModulePaths": {
-		"localBasePath": "resources",
-		"remoteExtPath": "YsArchivesMessages/resources"
+		"localBasePath": "modules",
+		"remoteExtPath": "YsArchivesMessages/modules"
 	},
 	"HookHandlers": {
 		"main": {
