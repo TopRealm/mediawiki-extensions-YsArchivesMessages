@@ -25,5 +25,7 @@
 	"group-templateeditor": "{{doc-group|templateeditor}}\nLocalized name of the template editors group.",
 	"group-templateeditor-member": "{{doc-group|templateeditor|member}}\nLocalized name of template editor group member.",
 	"group-importer": "{{doc-group|importer}}\nLocalized name of the importers group.",
-	"group-importer-member": "{{doc-group|importer|member}}\nLocalized name of importer group member."
+	"group-importer-member": "{{doc-group|importer|member}}\nLocalized name of importer group member.",
+	"group-honorary-maintainer": "{{doc-group|honorary-maintainer}}\nLocalized name of the honorary maintainers group.",
+	"group-honorary-maintainer-member": "{{doc-group|honorary-maintainer|member}}\nLocalized name of honorary maintainer group member."
 }

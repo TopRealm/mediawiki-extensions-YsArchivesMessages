@@ -25,5 +25,7 @@
 	"group-templateeditor": "Template editors",
 	"group-templateeditor-member": "{{GENDER:$1|template editor}}",
 	"group-importer": "Importers",
-	"group-importer-member": "{{GENDER:$1|importer}}"
+	"group-importer-member": "{{GENDER:$1|importer}}",
+	"group-honorary-maintainer": "Honorary maintainers",
+	"group-honorary-maintainer-member": "{{GENDER:$1|honorary maintainer}}"
 }

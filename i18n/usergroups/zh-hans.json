@@ -25,5 +25,7 @@
 	"group-templateeditor": "模板编辑员",
 	"group-templateeditor-member": "模板编辑员",
 	"group-importer": "导入者",
-	"group-importer-member": "导入者"
+	"group-importer-member": "导入者",
+	"group-honorary-maintainer": "荣誉维护员",
+	"group-honorary-maintainer-member": "荣誉维护员"
 }
